@@ -1,1 +1,1 @@
-<?php header('Location: http://eclipse.org/projects/project.php?id=cvs'); ?>
+<?php header('Location: http://eclipse.org/projects/project.php?id=technology.collections'); ?>
