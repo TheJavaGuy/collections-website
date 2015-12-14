@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Eclipse Collections - Feature rich, open source Java collections framework</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="#">Eclipse Collections</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#start">Download</a>
+                    </li>
+                    <li>
+                        <a href="#concept">Concept</a>
+                    </li>
+                    <li>
+                        <a href="#contribute">Contribute</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>Eclipse Collections</h1>
+                        <h3>A feature rich open source Java collections framework</h3>
+                        <br>
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="https://github.com/eclipse/eclipse-collections" class="btn btn-default btn-sm"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+
+	<a  name="start"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Get started with <br>Eclipse Collections</h2>
+                    <p class="lead">Eclipse Collections is a collections framework for Java.
+                        It has JDK-compatible List, Set and Map implementations with a rich API
+                        and set of utility classes that work with any JDK compatible Collections,
+                        Arrays, Maps or Strings. The iteration protocol was inspired by the Smalltalk collection framework.
+                        <br><br>Integrate it to your codebase with your favorite build tools!</p>
+                </div>
+                <div class="col-lg-7 col-sm-6">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#maven" data-toggle="tab">Maven</a></li>
+                        <li><a href="#gradle" data-toggle="tab">Gradle</a></li>
+                        <li><a href="#ivy" data-toggle="tab">Ivy</a></li>
+                        <li><a href="#download" data-toggle="tab">Download</a></li>
+                    </ul>
+                    <div id="dependencies" class="tab-content">
+                        <div class="tab-pane fade in active" id="maven">
+                            <pre  class="prettyprint">
+  &lt;dependency&gt;
+    &lt;groupId&gt;org.eclipse.collections&lt;/groupId&gt;
+    &lt;artifactId&gt;eclipse-collections-api&lt;/artifactId&gt;
+    &lt;version&gt;7.0.0&lt;/version&gt;
+  &lt;/dependency&gt;
+
+  &lt;dependency&gt;
+    &lt;groupId&gt;org.eclipse.collections&lt;/groupId&gt;
+    &lt;artifactId&gt;eclipse-collections&lt;/artifactId&gt;
+    &lt;version&gt;7.0.0&lt;/version>
+  &lt;/dependency&gt;</pre>
+                        </div>
+                        <div class="tab-pane fade" id="gradle">
+                            <pre  class="prettyprint">
+  compile 'org.eclipse.collections:eclipse-collections-api:7.0.0'
+  compile 'org.eclipse.collections:eclipse-collections:7.0.0'</pre>
+                        </div>
+                        <div class="tab-pane fade" id="ivy">
+                            <pre  class="prettyprint">
+  &lt;dependency org="org.eclipse.collections" name="eclipse-collections-api" rev="7.0.0" /&gt;
+  &lt;dependency org="org.eclipse.collections" name="eclipse-collections" rev="7.0.0" /&gt;</pre>
+                        </div>
+                        <div class="tab-pane fade" id="download">
+                            <pre class="prettyprint">
+  <a href="">eclipse-collections-api-7.0.0.jar</a>
+  <a href="">eclipse-collections-7.0.0.jar</a></pre>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <a name="concept"></a>
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-push-7 col-lg-5 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Rich, Concise and Readable APIs</h2>
+                    <p class="lead">Maximize the power of Java 8 Lambda expressions and method references with rich APIs directly available on your collections.</p>
+                </div>
+                <div class="col-lg-pull-5 col-lg-7 col-sm-pull-6  col-sm-6">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#ec" data-toggle="tab">Eclipse Collections</a></li>
+                        <li><a href="#method" data-toggle="tab">Eclipse Collections w/ Method Ref</a></li>
+                        <li><a href="#streams" data-toggle="tab">Java 8 Streams</a></li>
+                    </ul>
+                    <div id="ec-vs-streams" class="tab-content">
+                        <div class="tab-pane fade in active" id="ec">
+                            <pre  class="prettyprint lang-java">
+  boolean anyPeopleHaveCats
+      = this.people
+          .anySatisfy(person -> person.hasPet(PetType.CAT));
+
+  int countPeopleWithCats
+      = this.people
+          .count(person -> person.hasPet(PetType.CAT));
+
+  MutableList&lt;Person&gt; peopleWithCats
+      = this.people
+          .select(person -> person.hasPet(PetType.CAT));</pre>
+                        </div>
+                        <div class="tab-pane fade" id="method">
+                            <pre  class="prettyprint lang-java">
+  boolean anyPeopleHaveCats
+      = this.people
+          .anySatisfyWith(Person::hasPet, PetType.CAT);
+
+  int countPeopleWithCats
+      = this.people
+          .countWith(Person::hasPet, PetType.CAT);
+
+  MutableList&lt;Person&gt; peopleWithCats
+      = this.people
+          .selectWith(Person::hasPet, PetType.CAT)</pre>
+                        </div>
+                        <div class="tab-pane fade" id="streams">
+                            <pre  class="prettyprint lang-java">
+  boolean anyPeopleHaveCats
+      = this.people
+          .stream()
+          .anyMatch(person -> person.hasPet(PetType.CAT));
+
+  long countPeopleWithCats
+      = this.people
+          .stream()
+          .filter(person -> person.hasPet(PetType.CAT))
+          .count();
+
+  List&gt;Person&lt; peopleWithCats
+      = this.people
+          .stream()
+          .filter(person -> person.hasPet(PetType.CAT))
+          .collect(Collectors.toList());</pre>
+                        </div>
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">More container types, <br>mutable, immutable, primitives, <br>all available to you.</h2>
+                    <p class="lead">You can create various container types, with handy factory methods to instantiate</p>
+                </div>
+                <div class="col-lg-7 col-sm-6">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#mutable" data-toggle="tab">Mutable collections</a></li>
+                        <li><a href="#immutable" data-toggle="tab">Immutable collections</a></li>
+                        <li><a href="#primitives" data-toggle="tab">Primitive collections</a></li>
+                    </ul>
+                    <div id="container-types" class="tab-content">
+                        <div class="tab-pane fade in active" id="mutable">
+                            <pre  class="prettyprint lang-java">
+  //Initializing mutable list with empty(), of(), with() method
+  MutableList&lt;String&gt; mutableListEmpty
+      = Lists.mutable.empty();
+  MutableList&lt;String&gt; mutableListOf
+      = Lists.mutable.of("One", "One", "Two", "Three");
+  MutableList&lt;String&gt; mutableListWith
+      = Lists.mutable.with("One", "One", "Two", "Three");
+
+  //Various container types available
+  MutableSet&lt;String&gt; mutableSet
+      = Sets.mutable.with("One", "One", "Two", "Three");
+  MutableBag<&lt;tring&gt; mutableBag
+      = Bags.mutable.with("One", "One", "Two", "Three");
+  MutableStack&lt;String&gt; mutableStack
+      = Stacks.mutable.with("One", "One", "Two", "Three");
+  MutableMap&lt;String, String&gt; mutableMap
+      = Maps.mutable.with("key1", "value1", "key2", "value2", "key3", "value3");
+  MutableMultimap&lt;String, String&gt; multimapWithList
+      = Multimaps.mutable.list.with("key1", "value1-1", "key1", "value1-2", "key2","value2-1");</pre>
+                        </div>
+                        <div class="tab-pane fade" id="immutable">
+                            <pre  class="prettyprint lang-java">
+  //Initializing immutable list with empty(), of(), with() method
+  ImmutableList&lt;String&gt; immutableListEmpty
+      = Lists.immutable.empty();
+  ImmutableList&lt;String&gt; immutableListOf
+      = Lists.immutable.of("One", "One", "Two", "Three");
+  ImmutableList&lt;String&gt; immutableListWith
+      = Lists.immutable.with("One", "One", "Two", "Three");
+
+  //Various container types available
+  ImmutableSet&lt;String&gt; immutableSet
+      = Sets.immutable.with("One", "One", "Two", "Three");
+  ImmutableBag&lt;String&gt; immutableBag
+      = Bags.immutable.with("One", "One", "Two", "Three");
+  ImmutableStack&lt;String&gt; immutableStack
+      = Stacks.immutable.with("One", "One", "Two", "Three");
+  ImmutableMap&lt;String, String&gt; immutableMap
+      = Maps.immutable.with("key1", "value1", "key2", "value2", "key3", "value3");
+  ImmutableMultimap&lt;String, String&gt; immultimapWithList
+      = Multimaps.immutable.list.with("key1", "value1-1", "key1", "value1-2", "key2","value2-1");</pre>
+                        </div>
+                        <div class="tab-pane fade" id="primitives">
+                            <pre  class="prettyprint lang-java">
+  //Mutable and immutable Lists, Sets, Bags, Stacks and Maps are available for all 8 primitive types
+  MutableIntList intList
+      = IntLists.mutable.of(1, 2, 3);
+  MutableLongList longList
+      = LongLists.mutable.of(1L, 2L, 3L);
+  MutableCharList charList
+      = CharLists.mutable.of('a', 'b', 'c');
+  MutableShortList shortList
+      = ShortLists.mutable.of((short)1, (short)2, (short)3);
+  MutableByteList byteList
+      = ByteLists.mutable.of((byte)1, (byte)2, (byte)3);
+  MutableBooleanList booleanList
+      = BooleanLists.mutable.of(true, false);
+  MutableFloatList floatList
+      = FloatLists.mutable.of(1.0f, 2.0f, 3.0f);
+  MutableDoubleList doubleList
+      = DoubleLists.mutable.of(1.0, 2.0, 3.0);
+
+  //You can created a ranged ints with IntInterval
+  IntInterval oneTo10
+      = IntInterval.fromTo(1, 10); // ints from 1 to 10
+  // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  IntInterval oneTo10By3
+      = IntInterval.fromToBy(1, 10, 3); // ints from 1 to 10 step by 3
+  // [1, 4, 7, 10]
+  IntInterval oddsFrom1To10
+      = IntInterval.oddsFromTo(1, 10); // odd ints from 1 to 10
+  // [1, 3, 5, 7, 9]
+  IntInterval evensFrom1To10
+      = IntInterval.evensFromTo(1, 10); // even ints from i to 10
+  // [2, 4, 6, 8, 10]</pre>
+                        </div>
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Reduce memory footprint <br>with memory efficient containers.</h2>
+                    <p class="lead">Eclipse Collections provides memory efficient implementation of Set and Map, and all primitive collections</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/dog.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+	<a  name="contribute"></a>
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2>Contribute to Eclipse Collections:</h2>
+                </div>
+                <div class="col-lg-4">
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="https://github.com/eclipse/eclipse-collections" class="btn btn-default btn-sm"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <p class="copyright text-muted small">Copyright &copy; 2015 The Eclipse Foundation. All Rights Reserved. </p>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a class="small" href="http://www.eclipse.org/legal/privacy.php">Privacy</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a class="small" href="http://www.eclipse.org/legal/termsofuse.php">Terms</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
