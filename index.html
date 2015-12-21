@@ -21,6 +21,9 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
+    <!-- Google Code Prettify -->
+    <link href="google-code-prettify/sunburst.css" rel="stylesheet" type="text/css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -28,10 +31,20 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71645852-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
 </head>
 
-<body>
+<body onload="prettyPrint()">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
@@ -69,7 +82,7 @@
     <!-- Header -->
     <a name="about"></a>
     <div class="intro-header">
-        <div class="container">
+        <div class="container-fluid">
 
             <div class="row">
                 <div class="col-lg-12">
@@ -97,7 +110,7 @@
 	<a  name="start"></a>
     <div class="content-section-a">
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
@@ -160,37 +173,25 @@
     <a name="concept"></a>
     <div class="content-section-b">
 
-        <div class="container">
+        <div class="container-fluid">
 
             <div class="row">
                 <div class="col-lg-push-7 col-lg-5 col-sm-push-6  col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Rich, Concise and Readable APIs</h2>
-                    <p class="lead">Maximize the power of Java 8 Lambda expressions and method references with rich APIs directly available on your collections.</p>
+                    <p class="lead">Maximize the power of Java 8 Lambda expressions and method references with
+                        rich APIs directly available on your collections.
+                    </p>
                 </div>
                 <div class="col-lg-pull-5 col-lg-7 col-sm-pull-6  col-sm-6">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#ec" data-toggle="tab">Eclipse Collections</a></li>
-                        <li><a href="#method" data-toggle="tab">Eclipse Collections w/ Method Ref</a></li>
+                        <li class="active"><a href="#method" data-toggle="tab">Eclipse Collections w/ Method Ref</a></li>
+                        <li><a href="#ec" data-toggle="tab">Eclipse Collections w/ Lambda expression</a></li>
                         <li><a href="#streams" data-toggle="tab">Java 8 Streams</a></li>
                     </ul>
                     <div id="ec-vs-streams" class="tab-content">
-                        <div class="tab-pane fade in active" id="ec">
-                            <pre  class="prettyprint lang-java">
-  boolean anyPeopleHaveCats
-      = this.people
-          .anySatisfy(person -> person.hasPet(PetType.CAT));
-
-  int countPeopleWithCats
-      = this.people
-          .count(person -> person.hasPet(PetType.CAT));
-
-  MutableList&lt;Person&gt; peopleWithCats
-      = this.people
-          .select(person -> person.hasPet(PetType.CAT));</pre>
-                        </div>
-                        <div class="tab-pane fade" id="method">
+                        <div class="tab-pane fade in active" id="method">
                             <pre  class="prettyprint lang-java">
   boolean anyPeopleHaveCats
       = this.people
@@ -203,6 +204,20 @@
   MutableList&lt;Person&gt; peopleWithCats
       = this.people
           .selectWith(Person::hasPet, PetType.CAT)</pre>
+                        </div>
+                        <div class="tab-pane fade" id="ec">
+                            <pre  class="prettyprint lang-java">
+  boolean anyPeopleHaveCats
+      = this.people
+          .anySatisfy(person -> person.hasPet(PetType.CAT));
+
+  int countPeopleWithCats
+      = this.people
+          .count(person -> person.hasPet(PetType.CAT));
+
+  MutableList&lt;Person&gt; peopleWithCats
+      = this.people
+          .select(person -> person.hasPet(PetType.CAT));</pre>
                         </div>
                         <div class="tab-pane fade" id="streams">
                             <pre  class="prettyprint lang-java">
@@ -217,7 +232,7 @@
           .filter(person -> person.hasPet(PetType.CAT))
           .count();
 
-  List&gt;Person&lt; peopleWithCats
+  List&lt;Person&gt; peopleWithCats
       = this.people
           .stream()
           .filter(person -> person.hasPet(PetType.CAT))
@@ -238,14 +253,14 @@
 
     <div class="content-section-a">
 
-        <div class="container">
+        <div class="container-fluid">
 
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">More container types, <br>mutable, immutable, primitives, <br>all available to you.</h2>
-                    <p class="lead">You can create various container types, with handy factory methods to instantiate</p>
+                    <p class="lead">You can make use of various container types, with leveraging handy factory methods to instantiate.</p>
                 </div>
                 <div class="col-lg-7 col-sm-6">
                     <ul class="nav nav-tabs">
@@ -347,17 +362,32 @@
 
     <div class="content-section-b">
 
-        <div class="container">
+        <div class="container-fluid">
 
             <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                <div class="col-lg-push-6 col-lg-6 col-sm-push-6 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Reduce memory footprint <br>with memory efficient containers.</h2>
-                    <p class="lead">Eclipse Collections provides memory efficient implementation of Set and Map, and all primitive collections</p>
+                    <p class="lead">Eclipse Collections provides memory efficient implementation of Sets, Maps and all primitive collections. </p>
                 </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/dog.png" alt="">
+                <div class="col-lg-pull-6 col-lg-6 col-sm-pull-6 col-sm-6">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#set" data-toggle="tab">Sets</a></li>
+                        <li><a href="#map" data-toggle="tab">Maps</a></li>
+                        <li><a href="#ints" data-toggle="tab">Primitive Collections</a></li>
+                    </ul>
+                    <div id="memory" class="tab-content">
+                        <div class="tab-pane fade in active" id="set">
+                            <img class="img-responsive" src="img/set.png" alt="">
+                        </div>
+                        <div class="tab-pane fade" id="map">
+                            <img class="img-responsive" src="img/map.png" alt="">
+                        </div>
+                        <div class="tab-pane fade" id="ints">
+                            <img class="img-responsive" src="img/ints.png" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -370,7 +400,7 @@
 	<a  name="contribute"></a>
     <div class="banner">
 
-        <div class="container">
+        <div class="container-fluid">
 
             <div class="row">
                 <div class="col-lg-8">
@@ -380,6 +410,9 @@
                     <ul class="list-inline banner-social-buttons">
                         <li>
                             <a href="https://github.com/eclipse/eclipse-collections" class="btn btn-default btn-sm"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                        </li>
+                        <li>
+                            <a href="https://projects.eclipse.org/projects/technology.collections" class="btn btn-default btn-sm"><i class="fa fa-home fa-fw"></i> <span class="network-name">Project Home</span></a>
                         </li>
                     </ul>
                 </div>
@@ -393,7 +426,7 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="list-inline">
@@ -419,6 +452,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Google Code Prettify -->
+    <script type="text/javascript" src="google-code-prettify/prettify.js "></script>
 
 </body>
 
