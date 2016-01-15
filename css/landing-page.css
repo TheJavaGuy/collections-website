@@ -17,7 +17,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto Condensed","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 
@@ -43,7 +43,8 @@ h6 {
 
 .intro-header {
     height: 350px;
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    margin-top: 100px;
+    padding-top: 100px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 20px;
     text-align: center;
     color: #f8f8f8;
@@ -53,7 +54,7 @@ h6 {
 
 .intro-message {
     position: relative;
-    padding-top: 8%;
+    padding-top: 4%;
     padding-bottom: 10%;
 }
 
@@ -75,10 +76,13 @@ h6 {
 
 @media(max-width:767px) {
     .intro-header {
+        margin-top: 50px;
+        padding-top: 50px;
         height: 50%;
     }
 
     .intro-message {
+        padding-top: 8%;
         padding-bottom: 7%;
     }
 

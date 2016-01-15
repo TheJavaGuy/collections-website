@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Eclipse Collections - Happy development with the best Java collections framework ever. </title>
+    <title>Eclipse Collections - More features, less waste. </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,8 +19,7 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <!-- Google Code Prettify -->
     <link href="google-code-prettify/sunburst.css" rel="stylesheet" type="text/css">
 
@@ -82,6 +81,11 @@
                             <li><a href="ja/index.html">Japanese</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="https://projects.eclipse.org/projects/technology.collections">
+                            <img class="img-responsive" src="img/Egg-incubation.png" alt="Eclipse Incubation Egg">
+                        </a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -98,15 +102,10 @@
             <div class="row">
                 <div class="col-lg-push-2 col-lg-8">
                     <div class="intro-message">
-                        <h1>Eclipse Collections</h1>
-                        <h3>- Happy development with the best Java collections framework ever -</h3>
+                        <a  name="start"></a><!--TODO: Bring it back to correct place once incubation logo is removed.-->
+                        <h1>Eclipse <span style="font-weight: 400">Collections</span></h1>
+                        <h3>- More features, less waste -</h3>
                     </div>
-                </div>
-
-                <div class="col-lg-push-2 col-lg-2">
-                    <a href="https://projects.eclipse.org/projects/technology.collections">
-                        <img class="img-responsive" src="img/Egg-incubation.png" alt="Eclipse Incubation Egg">
-                    </a>
                 </div>
             </div>
 
@@ -118,7 +117,6 @@
 
     <!-- Page Content -->
 
-	<a  name="start"></a>
     <div class="content-section-a">
 
         <div class="container-fluid">
@@ -127,6 +125,7 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Get started with <br>Eclipse Collections</h2>
+                    <a name="concept"></a><!--TODO: Bring it back to correct place once incubation logo is removed.-->
                     <p class="lead">Eclipse Collections is the best Java collections framework ever
                         that brings happiness to your Java development.
                         <br><br>Integrate it to your codebase today with your favorite build tools!</p>
@@ -179,7 +178,6 @@
     </div>
     <!-- Get Started -->
 
-    <a name="concept"></a>
     <div class="content-section-b">
 
         <div class="container-fluid">
@@ -268,8 +266,8 @@
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">More container types, <br>mutable, immutable, primitives, <br>all available to you.</h2>
-                    <p class="lead">You can make use of various container types, with leveraging handy factory methods to instantiate.</p>
+                    <h2 class="section-heading">Many container types including <br>immutable collections, primitive collections, bimaps, multimaps and bags</h2>
+                    <p class="lead">You can make use of various container types, leveraging handy factory methods for instantiation.</p>
                 </div>
                 <div class="col-lg-7 col-sm-6">
                     <ul class="nav nav-tabs">
@@ -378,7 +376,7 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Reduce memory footprint <br>with memory efficient containers.</h2>
-                    <p class="lead">Eclipse Collections provides memory efficient implementation of Sets, Maps and all primitive collections. </p>
+                    <p class="lead">Eclipse Collections provides memory efficient implementation of Sets and Maps as well as primitive collections. </p>
                 </div>
                 <div class="col-lg-pull-6 col-lg-6 col-sm-pull-6 col-sm-6">
                     <ul class="nav nav-tabs">
@@ -386,6 +384,7 @@
                         <li><a href="#map" data-toggle="tab">Maps</a></li>
                         <li><a href="#ints" data-toggle="tab">Primitive Collections</a></li>
                     </ul>
+                    <a name="history"></a><!--TODO: Bring it back to correct place once incubation logo is removed.-->
                     <div id="memory" class="tab-content">
                         <div class="tab-pane fade in active" id="set">
                             <img class="img-responsive" src="img/set.png" alt="">
@@ -406,15 +405,16 @@
     </div>
     <!-- Memory footprint -->
 
-    <a name="history"></a>
     <div class="content-section-a">
 
         <div class="container-fluid">
 
             <h2 class="section-heading">History of Eclipse Collections</h2>
             <p class="lead">
-                Eclipse Collections started off as an open source project on GitHub called
-                <a href="https://github.com/goldmansachs/gs-collections">GS Collections</a> in 2012.
+                The origin of Eclipse Collections was started off as a collections framework named Caramel at Goldman Sachs in 2004.
+
+                Since then the framework has evolved, and in 2012, it was open sourced to GitHub as a project called
+                <a href="https://github.com/goldmansachs/gs-collections">GS Collections</a>.
                 <br><br>
                 GS Collections has been presented at number of
                 <a href="https://github.com/eclipse/eclipse-collections/wiki/Conference-talks-and-meetups">conferences</a>
@@ -425,7 +425,11 @@
                 There are <a href="https://github.com/eclipse/eclipse-collections/wiki/Articles">articles</a> on InfoQ.com
                 showing some of the capabilities of the collections framework through examples, and also interviews to the creator of GS Collections.
                 <br><br>
+
+                Over the years, around 40 or so developers from the same company have contributed to the collections framework.
+
                 To maximize the best nature of open source project, GS Collections has been migrated to Eclipse Foundation, re-branded as Eclipse Collections in 2015.
+                Now the framework if fully open to the community, accepting contributions!
             </p>
             <hr class="section-heading-spacer">
 
@@ -444,12 +448,12 @@
                 <div class="col-lg-4 col-sm-4">
                     <h3>Contribute</h3>
                     <p class="regular">
-                        We welcome contributions to the Eclipse Collections project!!
+                        We welcome contributions!
                         <br><br>
                         Eclipse Collections Project Roadmap can be found <a href="https://github.com/eclipse/eclipse-collections/wiki/Roadmap">here</a>.
                         <br><br>
-                        The Eclipse Collections project accepts contributions via pull requests in this GitHub.
-                        Please see <a href="https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md">How To Contribute</a> for more detail.
+                        We accept contributions via pull requests in GitHub.
+                        Please see <a href="https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md">How To Contribute</a> to get started.
                     </p>
                 </div>
                 <div class="col-lg-4 col-sm-4">
@@ -501,7 +505,7 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <h3>- Happy development with the best Java collections framework ever -</h3>
+                    <h3>- More features, less waste -</h3>
                 </div>
             </div>
 
