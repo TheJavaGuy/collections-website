@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
 
@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Eclipse Collections - More features, less waste. </title>
+    <title>Eclipse Collections - Features you want with the collections you need. (日本語ページ) </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -106,7 +106,7 @@
                 <div class="intro-message">
                     <a  name="start"></a><!--TODO: Bring it back to correct place once incubation logo is removed.-->
                     <h1>Eclipse <span style="font-weight: 400">Collections</span></h1>
-                    <h3>- More features, less waste  -</h3>
+                    <h3>- Features you want with the collections you need -</h3>
                 </div>
             </div>
         </div>
@@ -126,9 +126,9 @@
             <div class="col-lg-5 col-sm-6">
                 <hr class="section-heading-spacer">
                 <div class="clearfix"></div>
-                <h2 class="section-heading">Eclipse Collectionsを始めてみよう</h2>
+                <h2 class="section-heading">Eclipse Collectionsを使ってみよう</h2>
                 <a name="concept"></a><!--TODO: Bring it back to correct place once incubation logo is removed.-->
-                <p class="lead">Eclipse CollectionsはあなたのJava開発を幸せにする
+                <p class="lead">Eclipse CollectionsはあなたのJava開発を楽しくさせるような、
                     最高のJavaコレクションフレームワークです。
                     <br><br>今すぐお好みのビルドツールを使ってあなたのJavaプロジェクトに導入してみてください！</p>
             </div>
@@ -188,8 +188,8 @@
             <div class="col-lg-push-7 col-lg-5 col-sm-push-6  col-sm-6">
                 <hr class="section-heading-spacer">
                 <div class="clearfix"></div>
-                <h2 class="section-heading">簡潔で読み易い、豊富なAPI</h2>
-                <p class="lead">コレクションから直接呼び出せる豊富なAPIを使って、Java 8のラムダ式やメソッド参照の簡潔さを最大限に活用することができます.
+                <h2 class="section-heading">簡単に使えて読み易い、豊富なAPI</h2>
+                <p class="lead">コレクションから直接呼び出せる豊富なAPIを使って、Java 8のラムダ式やメソッド参照の簡潔さを最大限に活用することができます。
                 </p>
             </div>
             <div class="col-lg-pull-5 col-lg-7 col-sm-pull-6  col-sm-6">
@@ -267,8 +267,8 @@
             <div class="col-lg-5 col-sm-6">
                 <hr class="section-heading-spacer">
                 <div class="clearfix"></div>
-                <h2 class="section-heading">より多くのコレクション型や、可変、不変なコレクション、そしてプリミティブ型が利用できるコレクション、全てあなたのものです</h2>
-                <p class="lead">Eclipse Collectionsに用意されているファクトリメソッドを使うことで、様々な種類のコレクション型を、可変性やプリミティブ型を指定して簡単につくることができます。</p>
+                <h2 class="section-heading">可変、不変、プリミティブコレクションや、Bag、MutableBag、BiMapなど、より多くのコレクション型をサポート</h2>
+                <p class="lead">Eclipse Collectionsのファクトリメソッドを活用して、様々な種類のコレクション型を可変性やプリミティブ型を指定して簡単につくることができます。</p>
             </div>
             <div class="col-lg-7 col-sm-6">
                 <ul class="nav nav-tabs">
@@ -290,14 +290,16 @@
   //List以外にもSet、Bag、Stack、Map、Multimap等、様々なコンテナ型が利用できます
   MutableSet&lt;String&gt; mutableSet
       = Sets.mutable.with("One", "One", "Two", "Three");
-  MutableBag<&lt;tring&gt; mutableBag
+  MutableBag&lt;String&gt; mutableBag
       = Bags.mutable.with("One", "One", "Two", "Three");
   MutableStack&lt;String&gt; mutableStack
       = Stacks.mutable.with("One", "One", "Two", "Three");
   MutableMap&lt;String, String&gt; mutableMap
       = Maps.mutable.with("key1", "value1", "key2", "value2", "key3", "value3");
   MutableMultimap&lt;String, String&gt; multimapWithList
-      = Multimaps.mutable.list.with("key1", "value1-1", "key1", "value1-2", "key2","value2-1");</pre>
+      = Multimaps.mutable.list.with("key1", "value1-1", "key1", "value1-2", "key2","value2-1");
+  MutableBiMap&lt;String, String&gt; mutableBiMap
+      = BiMaps.mutable.with("key1", "value1", "key2", "value2", "key3", "value3");</pre>
                     </div>
                     <div class="tab-pane fade" id="immutable">
                             <pre  class="prettyprint lang-java">
@@ -319,7 +321,9 @@
   ImmutableMap&lt;String, String&gt; immutableMap
       = Maps.immutable.with("key1", "value1", "key2", "value2", "key3", "value3");
   ImmutableMultimap&lt;String, String&gt; immultimapWithList
-      = Multimaps.immutable.list.with("key1", "value1-1", "key1", "value1-2", "key2","value2-1");</pre>
+      = Multimaps.immutable.list.with("key1", "value1-1", "key1", "value1-2", "key2","value2-1");
+  ImmutableBiMap&lt;String, String&gt; immutableBiMap
+      = BiMaps.immutable.with("key1", "value1", "key2", "value2", "key3", "value3");</pre>
                     </div>
                     <div class="tab-pane fade" id="primitives">
                             <pre  class="prettyprint lang-java">
@@ -377,7 +381,7 @@
                 <hr class="section-heading-spacer">
                 <div class="clearfix"></div>
                 <h2 class="section-heading">メモリ効率の良いコレクションで、あなたのプロセスを軽量に</h2>
-                <p class="lead">Eclipse CollectionsはSet、Map、そして全てのプリミティブコレクションでメモリ効率の良い実装を提供します。 </p>
+                <p class="lead">Eclipse CollectionsはSet、Map、全てのプリミティブコレクションにおいて、メモリ効率の良い実装になっています。 </p>
             </div>
             <div class="col-lg-pull-6 col-lg-6 col-sm-pull-6 col-sm-6">
                 <ul class="nav nav-tabs">
@@ -412,7 +416,7 @@
 
         <h2 class="section-heading">Eclipse Collectionsの歴史</h2>
         <p class="lead">
-            Eclipse Collectionsの起源は、2004年にゴールドマン・サックス社内製のCaramelと呼ばれるコレクションフレームワークから始まりました。
+            Eclipse Collectionsは、2004年にゴールドマン・サックス社内製のCaramelと呼ばれるコレクションフレームワークから始まりました。
 
             このフレームワークは進化し、2012年に
             <a href="https://github.com/goldmansachs/gs-collections">GS Collections</a>としてGitHub上にオープンソースで公開されました。
@@ -423,10 +427,15 @@
             また、2014年にはJava 8、Scala、GS Collectionsそれぞれの実装における並列遅延実行処理のパフォーマンス比較が
             <a href="http://www.infoq.com/presentations/java-streams-scala-parallel-collections">QCon New York</a>にて発表され、大きな注目を浴びました。
             <br><br>
-            メディアにおいては、GS Collections開発者の<a href="https://www.jclarity.com/2013/11/26/stalwarts-in-tech-an-interview-with-donald-raab-gs-collections-lead/">インタビュー記事</a>や、InfoQのGS Collections活用法を紹介した記事（日本語版<a href="http://www.infoq.com/jp/articles/GS-Collections-by-Example-1">Part1</a>・<a href="http://www.infoq.com/jp/articles/GS-Collections-by-Example-2">Part2</a>）などが掲載されてきました。
+            メディアにおいては、GS Collections開発者の
+            <a href="https://www.jclarity.com/2013/11/26/stalwarts-in-tech-an-interview-with-donald-raab-gs-collections-lead/">インタビュー記事</a>
+            や、InfoQのGS Collections活用法を紹介した記事（日本語版<a href="http://www.infoq.com/jp/articles/GS-Collections-by-Example-1">Part1</a>
+            ・<a href="http://www.infoq.com/jp/articles/GS-Collections-by-Example-2">Part2</a>）などが掲載されています。
             <br><br>
-            10余年の年月を経て、同コレクションフレームワークには同社の40人余りもの開発者が携わってきました。
-            2015年、オープンソースプロジェクトとしての特徴を最大限に活かすため、GS CollectionsはEclipse Foundationに移管され、Eclipse Collectionsとして生まれ変わりました。コミュニティからのコントリビューションを受け付ける、完全にオープンなフレームワークになったのです。
+            10余年にわたり、同コレクションフレームワークには同社の40人余りもの開発者が携わってきました。
+            <br><br>
+            2015年、オープンソースプロジェクトとしての特徴を最大限に活かすため、GS CollectionsはEclipse Foundationに移管され、Eclipse Collectionsとして生まれ変わりました。
+            コミュニティからのコントリビューションを受け付ける、完全にオープンなフレームワークになったのです。
         </p>
         <hr class="section-heading-spacer">
 

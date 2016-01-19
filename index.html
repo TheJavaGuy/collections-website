@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Eclipse Collections - More features, less waste. </title>
+    <title>Eclipse Collections - Features you want with the collections you need. </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -104,7 +104,7 @@
                     <div class="intro-message">
                         <a  name="start"></a><!--TODO: Bring it back to correct place once incubation logo is removed.-->
                         <h1>Eclipse <span style="font-weight: 400">Collections</span></h1>
-                        <h3>- More features, less waste -</h3>
+                        <h3>- Features you want with the collections you need -</h3>
                     </div>
                 </div>
             </div>
@@ -289,14 +289,16 @@
   //Various container types available
   MutableSet&lt;String&gt; mutableSet
       = Sets.mutable.with("One", "One", "Two", "Three");
-  MutableBag<&lt;tring&gt; mutableBag
+  MutableBag&lt;String&gt; mutableBag
       = Bags.mutable.with("One", "One", "Two", "Three");
   MutableStack&lt;String&gt; mutableStack
       = Stacks.mutable.with("One", "One", "Two", "Three");
   MutableMap&lt;String, String&gt; mutableMap
       = Maps.mutable.with("key1", "value1", "key2", "value2", "key3", "value3");
   MutableMultimap&lt;String, String&gt; multimapWithList
-      = Multimaps.mutable.list.with("key1", "value1-1", "key1", "value1-2", "key2","value2-1");</pre>
+      = Multimaps.mutable.list.with("key1", "value1-1", "key1", "value1-2", "key2","value2-1");
+  MutableBiMap&lt;String, String&gt; mutableBiMap
+      = BiMaps.mutable.with("key1", "value1", "key2", "value2", "key3", "value3");</pre>
                         </div>
                         <div class="tab-pane fade" id="immutable">
                             <pre  class="prettyprint lang-java">
@@ -318,7 +320,9 @@
   ImmutableMap&lt;String, String&gt; immutableMap
       = Maps.immutable.with("key1", "value1", "key2", "value2", "key3", "value3");
   ImmutableMultimap&lt;String, String&gt; immultimapWithList
-      = Multimaps.immutable.list.with("key1", "value1-1", "key1", "value1-2", "key2","value2-1");</pre>
+      = Multimaps.immutable.list.with("key1", "value1-1", "key1", "value1-2", "key2","value2-1");
+  ImmutableBiMap&lt;String, String&gt; immutableBiMap
+      = BiMaps.immutable.with("key1", "value1", "key2", "value2", "key3", "value3");</pre>
                         </div>
                         <div class="tab-pane fade" id="primitives">
                             <pre  class="prettyprint lang-java">
@@ -375,7 +379,7 @@
                 <div class="col-lg-push-6 col-lg-6 col-sm-push-6 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Reduce memory footprint <br>with memory efficient containers.</h2>
+                    <h2 class="section-heading">Reduce memory footprint <br>with memory efficient containers</h2>
                     <p class="lead">Eclipse Collections provides memory efficient implementation of Sets and Maps as well as primitive collections. </p>
                 </div>
                 <div class="col-lg-pull-6 col-lg-6 col-sm-pull-6 col-sm-6">
@@ -421,15 +425,18 @@
                 including JVM Summit in 2012 and JavaOne in 2014.
                 A performance comparison between the parallel lazy implementations of Java 8, Scala and GS Collections was presented at
                 <a href="http://www.infoq.com/presentations/java-streams-scala-parallel-collections">QCon New York</a> in 2014.
-                <br><br>
-                There are <a href="https://github.com/eclipse/eclipse-collections/wiki/Articles">articles</a> on InfoQ.com
+                Also <a href="https://github.com/eclipse/eclipse-collections/wiki/Articles">articles</a> about GS Collections
+                (<a href="http://www.infoq.com/articles/GS-Collections-by-Example-1">Part1</a> /
+                <a href="http://www.infoq.com/articles/GS-Collections-by-Example-2">Part2</a>)
+                have published on InfoQ.com
                 showing some of the capabilities of the collections framework through examples, and also interviews to the creator of GS Collections.
                 <br><br>
 
                 Over the years, around 40 or so developers from the same company have contributed to the collections framework.
+                <br><br>
 
                 To maximize the best nature of open source project, GS Collections has been migrated to Eclipse Foundation, re-branded as Eclipse Collections in 2015.
-                Now the framework if fully open to the community, accepting contributions!
+                Now the framework is fully open to the community, accepting contributions!
             </p>
             <hr class="section-heading-spacer">
 
