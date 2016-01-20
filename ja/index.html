@@ -141,32 +141,32 @@
                 <div id="dependencies" class="tab-content">
                     <div class="tab-pane fade in active" id="maven">
                             <pre  class="prettyprint">
-  &lt;dependency&gt;
-    &lt;groupId&gt;org.eclipse.collections&lt;/groupId&gt;
-    &lt;artifactId&gt;eclipse-collections-api&lt;/artifactId&gt;
-    &lt;version&gt;7.0.0&lt;/version&gt;
-  &lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.eclipse.collections&lt;/groupId&gt;
+  &lt;artifactId&gt;eclipse-collections-api&lt;/artifactId&gt;
+  &lt;version&gt;7.0.0&lt;/version&gt;
+&lt;/dependency&gt;
 
-  &lt;dependency&gt;
-    &lt;groupId&gt;org.eclipse.collections&lt;/groupId&gt;
-    &lt;artifactId&gt;eclipse-collections&lt;/artifactId&gt;
-    &lt;version&gt;7.0.0&lt;/version>
-  &lt;/dependency&gt;</pre>
+&lt;dependency&gt;
+  &lt;groupId&gt;org.eclipse.collections&lt;/groupId&gt;
+  &lt;artifactId&gt;eclipse-collections&lt;/artifactId&gt;
+  &lt;version&gt;7.0.0&lt;/version>
+&lt;/dependency&gt;</pre>
                     </div>
                     <div class="tab-pane fade" id="gradle">
                             <pre  class="prettyprint">
-  compile 'org.eclipse.collections:eclipse-collections-api:7.0.0'
-  compile 'org.eclipse.collections:eclipse-collections:7.0.0'</pre>
+compile 'org.eclipse.collections:eclipse-collections-api:7.0.0'
+compile 'org.eclipse.collections:eclipse-collections:7.0.0'</pre>
                     </div>
                     <div class="tab-pane fade" id="ivy">
                             <pre  class="prettyprint">
-  &lt;dependency org="org.eclipse.collections" name="eclipse-collections-api" rev="7.0.0" /&gt;
-  &lt;dependency org="org.eclipse.collections" name="eclipse-collections" rev="7.0.0" /&gt;</pre>
+&lt;dependency org="org.eclipse.collections" name="eclipse-collections-api" rev="7.0.0" /&gt;
+&lt;dependency org="org.eclipse.collections" name="eclipse-collections" rev="7.0.0" /&gt;</pre>
                     </div>
                     <div class="tab-pane fade" id="download">
                             <pre class="prettyprint">
-  <a href="">eclipse-collections-api-7.0.0.jar</a>
-  <a href="">eclipse-collections-7.0.0.jar</a></pre>
+  <a target="_blank" href="http://mvnrepository.com/artifact/org.eclipse.collections/eclipse-collections-api/7.0.0">eclipse-collections-api-7.0.0.jar</a>
+  <a target="_blank" href="http://mvnrepository.com/artifact/org.eclipse.collections/eclipse-collections/7.0.0">eclipse-collections-7.0.0.jar</a></pre>
                     </div>
 
                 </div>
@@ -200,50 +200,50 @@
                 <div id="ec-vs-streams" class="tab-content">
                     <div class="tab-pane fade in active" id="method">
                             <pre  class="prettyprint lang-java">
-  boolean anyPeopleHaveCats
-      = this.people
-          .anySatisfyWith(Person::hasPet, PetType.CAT);
+boolean anyPeopleHaveCats =
+  this.people
+    .anySatisfyWith(Person::hasPet, PetType.CAT);
 
-  int countPeopleWithCats
-      = this.people
-          .countWith(Person::hasPet, PetType.CAT);
+int countPeopleWithCats =
+  this.people
+    .countWith(Person::hasPet, PetType.CAT);
 
-  MutableList&lt;Person&gt; peopleWithCats
-      = this.people
-          .selectWith(Person::hasPet, PetType.CAT)</pre>
+MutableList&lt;Person&gt; peopleWithCats =
+  this.people
+    .selectWith(Person::hasPet, PetType.CAT)</pre>
                     </div>
                     <div class="tab-pane fade" id="ec">
                             <pre  class="prettyprint lang-java">
-  boolean anyPeopleHaveCats
-      = this.people
-          .anySatisfy(person -> person.hasPet(PetType.CAT));
+boolean anyPeopleHaveCats =
+  this.people
+    .anySatisfy(person -> person.hasPet(PetType.CAT));
 
-  int countPeopleWithCats
-      = this.people
-          .count(person -> person.hasPet(PetType.CAT));
+int countPeopleWithCats =
+  this.people
+    .count(person -> person.hasPet(PetType.CAT));
 
-  MutableList&lt;Person&gt; peopleWithCats
-      = this.people
-          .select(person -> person.hasPet(PetType.CAT));</pre>
+MutableList&lt;Person&gt; peopleWithCats =
+  this.people
+    .select(person -> person.hasPet(PetType.CAT));</pre>
                     </div>
                     <div class="tab-pane fade" id="streams">
                             <pre  class="prettyprint lang-java">
-  boolean anyPeopleHaveCats
-      = this.people
-          .stream()
-          .anyMatch(person -> person.hasPet(PetType.CAT));
+boolean anyPeopleHaveCats =
+  this.people
+    .stream()
+    .anyMatch(person -> person.hasPet(PetType.CAT));
 
-  long countPeopleWithCats
-      = this.people
-          .stream()
-          .filter(person -> person.hasPet(PetType.CAT))
-          .count();
+long countPeopleWithCats =
+  this.people
+    .stream()
+    .filter(person -> person.hasPet(PetType.CAT))
+    .count();
 
-  List&lt;Person&gt; peopleWithCats
-      = this.people
-          .stream()
-          .filter(person -> person.hasPet(PetType.CAT))
-          .collect(Collectors.toList());</pre>
+List&lt;Person&gt; peopleWithCats =
+  this.people
+    .stream()
+    .filter(person -> person.hasPet(PetType.CAT))
+    .collect(Collectors.toList());</pre>
                     </div>
                 </div>
                 <!-- /.tab-content -->
@@ -278,85 +278,85 @@
                 <div id="container-types" class="tab-content">
                     <div class="tab-pane fade in active" id="mutable">
                             <pre  class="prettyprint lang-java">
-  //可変Listをempty(), of(), with()メソッドを使用して初期化できます
-  MutableList&lt;String&gt; mutableListEmpty
-      = Lists.mutable.empty();
-  MutableList&lt;String&gt; mutableListOf
-      = Lists.mutable.of("One", "One", "Two", "Three");
-  MutableList&lt;String&gt; mutableListWith
-      = Lists.mutable.with("One", "One", "Two", "Three");
+//可変Listをempty(), of(), with()メソッドを使用して初期化できます
+MutableList&lt;String&gt; mutableListEmpty =
+  Lists.mutable.empty();
+MutableList&lt;String&gt; mutableListOf =
+  Lists.mutable.of("One", "One", "Two", "Three");
+MutableList&lt;String&gt; mutableListWith =
+  Lists.mutable.with("One", "One", "Two", "Three");
 
-  //List以外にもSet、Bag、Stack、Map、Multimap等、様々なコンテナ型が利用できます
-  MutableSet&lt;String&gt; mutableSet
-      = Sets.mutable.with("One", "One", "Two", "Three");
-  MutableBag&lt;String&gt; mutableBag
-      = Bags.mutable.with("One", "One", "Two", "Three");
-  MutableStack&lt;String&gt; mutableStack
-      = Stacks.mutable.with("One", "One", "Two", "Three");
-  MutableMap&lt;String, String&gt; mutableMap
-      = Maps.mutable.with("key1", "value1", "key2", "value2", "key3", "value3");
-  MutableMultimap&lt;String, String&gt; multimapWithList
-      = Multimaps.mutable.list.with("key1", "value1-1", "key1", "value1-2", "key2","value2-1");
-  MutableBiMap&lt;String, String&gt; mutableBiMap
-      = BiMaps.mutable.with("key1", "value1", "key2", "value2", "key3", "value3");</pre>
+//List以外にもSet、Bag、Stack、Map、Multimap等、様々なコンテナ型が利用できます
+MutableSet&lt;String&gt; mutableSet =
+  Sets.mutable.with("One", "One", "Two", "Three");
+MutableBag&lt;String&gt; mutableBag =
+  Bags.mutable.with("One", "One", "Two", "Three");
+MutableStack&lt;String&gt; mutableStack =
+  Stacks.mutable.with("One", "One", "Two", "Three");
+MutableMap&lt;String, String&gt; mutableMap =
+  Maps.mutable.with("key1", "value1", "key2", "value2", "key3", "value3");
+MutableMultimap&lt;String, String&gt; multimapWithList =
+  Multimaps.mutable.list.with("key1", "value1-1", "key1", "value1-2", "key2","value2-1");
+MutableBiMap&lt;String, String&gt; mutableBiMap =
+  BiMaps.mutable.with("key1", "value1", "key2", "value2", "key3", "value3");</pre>
                     </div>
                     <div class="tab-pane fade" id="immutable">
                             <pre  class="prettyprint lang-java">
-  //不変Listをempty(), of(), with()メソッドを使用して初期化できます
-  ImmutableList&lt;String&gt; immutableListEmpty
-      = Lists.immutable.empty();
-  ImmutableList&lt;String&gt; immutableListOf
-      = Lists.immutable.of("One", "One", "Two", "Three");
-  ImmutableList&lt;String&gt; immutableListWith
-      = Lists.immutable.with("One", "One", "Two", "Three");
+//不変Listをempty(), of(), with()メソッドを使用して初期化できます
+ImmutableList&lt;String&gt; immutableListEmpty =
+  Lists.immutable.empty();
+ImmutableList&lt;String&gt; immutableListOf =
+  Lists.immutable.of("One", "One", "Two", "Three");
+ImmutableList&lt;String&gt; immutableListWith =
+  Lists.immutable.with("One", "One", "Two", "Three");
 
-  //List以外にもSet、Bag、Stack、Map、Multimap等、様々なコンテナ型が利用できます
-  ImmutableSet&lt;String&gt; immutableSet
-      = Sets.immutable.with("One", "One", "Two", "Three");
-  ImmutableBag&lt;String&gt; immutableBag
-      = Bags.immutable.with("One", "One", "Two", "Three");
-  ImmutableStack&lt;String&gt; immutableStack
-      = Stacks.immutable.with("One", "One", "Two", "Three");
-  ImmutableMap&lt;String, String&gt; immutableMap
-      = Maps.immutable.with("key1", "value1", "key2", "value2", "key3", "value3");
-  ImmutableMultimap&lt;String, String&gt; immultimapWithList
-      = Multimaps.immutable.list.with("key1", "value1-1", "key1", "value1-2", "key2","value2-1");
-  ImmutableBiMap&lt;String, String&gt; immutableBiMap
-      = BiMaps.immutable.with("key1", "value1", "key2", "value2", "key3", "value3");</pre>
+//List以外にもSet、Bag、Stack、Map、Multimap等、様々なコンテナ型が利用できます
+ImmutableSet&lt;String&gt; immutableSet =
+  Sets.immutable.with("One", "One", "Two", "Three");
+ImmutableBag&lt;String&gt; immutableBag =
+  Bags.immutable.with("One", "One", "Two", "Three");
+ImmutableStack&lt;String&gt; immutableStack =
+  Stacks.immutable.with("One", "One", "Two", "Three");
+ImmutableMap&lt;String, String&gt; immutableMap =
+  Maps.immutable.with("key1", "value1", "key2", "value2", "key3", "value3");
+ImmutableMultimap&lt;String, String&gt; immultimapWithList =
+  Multimaps.immutable.list.with("key1", "value1-1", "key1", "value1-2", "key2","value2-1");
+ImmutableBiMap&lt;String, String&gt; immutableBiMap =
+  BiMaps.immutable.with("key1", "value1", "key2", "value2", "key3", "value3");</pre>
                     </div>
                     <div class="tab-pane fade" id="primitives">
                             <pre  class="prettyprint lang-java">
-  //不変、可変なList、Set、Bag、Stack、Mapが8個のプリミティブ型全てに対して利用できます
-  MutableIntList intList
-      = IntLists.mutable.of(1, 2, 3);
-  MutableLongList longList
-      = LongLists.mutable.of(1L, 2L, 3L);
-  MutableCharList charList
-      = CharLists.mutable.of('a', 'b', 'c');
-  MutableShortList shortList
-      = ShortLists.mutable.of((short)1, (short)2, (short)3);
-  MutableByteList byteList
-      = ByteLists.mutable.of((byte)1, (byte)2, (byte)3);
-  MutableBooleanList booleanList
-      = BooleanLists.mutable.of(true, false);
-  MutableFloatList floatList
-      = FloatLists.mutable.of(1.0f, 2.0f, 3.0f);
-  MutableDoubleList doubleList
-      = DoubleLists.mutable.of(1.0, 2.0, 3.0);
+//不変、可変なList、Set、Bag、Stack、Mapが8個のプリミティブ型全てに対して利用できます
+MutableIntList intList =
+  IntLists.mutable.of(1, 2, 3);
+MutableLongList longList =
+  LongLists.mutable.of(1L, 2L, 3L);
+MutableCharList charList =
+  CharLists.mutable.of('a', 'b', 'c');
+MutableShortList shortList =
+  ShortLists.mutable.of((short)1, (short)2, (short)3);
+MutableByteList byteList =
+  ByteLists.mutable.of((byte)1, (byte)2, (byte)3);
+MutableBooleanList booleanList =
+  BooleanLists.mutable.of(true, false);
+MutableFloatList floatList =
+  FloatLists.mutable.of(1.0f, 2.0f, 3.0f);
+MutableDoubleList doubleList =
+  DoubleLists.mutable.of(1.0, 2.0, 3.0);
 
-  //IntIntervalを用いて範囲指定したintのコレクションをつくることができます
-  IntInterval oneTo10
-      = IntInterval.fromTo(1, 10); // 1から10までのint
-  // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  IntInterval oneTo10By3
-      = IntInterval.fromToBy(1, 10, 3); // 1から10までの3つおきのint
-  // [1, 4, 7, 10]
-  IntInterval oddsFrom1To10
-      = IntInterval.oddsFromTo(1, 10); // 1から10までの奇数int
-  // [1, 3, 5, 7, 9]
-  IntInterval evensFrom1To10
-      = IntInterval.evensFromTo(1, 10); // 1から10までの偶数int
-  // [2, 4, 6, 8, 10]</pre>
+//IntIntervalを用いて範囲指定したintのコレクションをつくることができます
+IntInterval oneTo10 =
+  IntInterval.fromTo(1, 10); // 1から10までのint
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+IntInterval oneTo10By3 =
+  IntInterval.fromToBy(1, 10, 3); // 1から10までの3つおきのint
+// [1, 4, 7, 10]
+IntInterval oddsFrom1To10 =
+  IntInterval.oddsFromTo(1, 10); // 1から10までの奇数int
+// [1, 3, 5, 7, 9]
+IntInterval evensFrom1To10 =
+  IntInterval.evensFromTo(1, 10); // 1から10までの偶数int
+// [2, 4, 6, 8, 10]</pre>
                     </div>
                 </div>
                 <!-- /.tab-content -->
@@ -485,7 +485,7 @@
             </div>
             <div class="col-lg-4 col-sm-4">
                 <h3>コニュミティ リンク集</h3>
-                <p class="regular">Eclipse PME: <a href="https://projects.eclipse.org/projects/technology.collections">eclipse project management infrastructure</a></p>
+                <p class="regular">Eclipse PMI: <a href="https://projects.eclipse.org/projects/technology.collections">eclipse project management infrastructure</a></p>
                 <p class="regular">GitHub: <a href="https://github.com/eclipse/eclipse-collections">eclipse-collections</a></p>
                 <p class="regular">Issues: <a href="https://github.com/eclipse/eclipse-collections/issues">GitHub issues</a></p>
                 <p class="regular">Mailing lists: <a href="https://dev.eclipse.org/mailman/listinfo/collections-dev">collections-dev</a></p>
