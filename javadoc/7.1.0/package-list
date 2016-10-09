@@ -60,11 +60,6 @@ org.eclipse.collections.api.stack
 org.eclipse.collections.api.stack.primitive
 org.eclipse.collections.api.tuple
 org.eclipse.collections.api.tuple.primitive
-org.eclipse.collections.codegenerator
-org.eclipse.collections.codegenerator.ant
-org.eclipse.collections.codegenerator.maven
-org.eclipse.collections.codegenerator.model
-org.eclipse.collections.codegenerator.tools
 org.eclipse.collections.impl
 org.eclipse.collections.impl.bag
 org.eclipse.collections.impl.bag.immutable
@@ -99,16 +94,6 @@ org.eclipse.collections.impl.factory
 org.eclipse.collections.impl.factory.primitive
 org.eclipse.collections.impl.forkjoin
 org.eclipse.collections.impl.iterator
-org.eclipse.collections.impl.jmh
-org.eclipse.collections.impl.jmh.domain
-org.eclipse.collections.impl.jmh.generated
-org.eclipse.collections.impl.jmh.list
-org.eclipse.collections.impl.jmh.list.generated
-org.eclipse.collections.impl.jmh.map
-org.eclipse.collections.impl.jmh.map.generated
-org.eclipse.collections.impl.jmh.runner
-org.eclipse.collections.impl.jmh.set.sorted
-org.eclipse.collections.impl.jmh.set.sorted.generated
 org.eclipse.collections.impl.lazy
 org.eclipse.collections.impl.lazy.iterator
 org.eclipse.collections.impl.lazy.parallel
@@ -180,4 +165,3 @@ org.eclipse.collections.impl.utility
 org.eclipse.collections.impl.utility.internal
 org.eclipse.collections.impl.utility.internal.primitive
 org.eclipse.collections.impl.utility.primitive
-org.openjdk.jmh.infra.generated
